@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: user
+      MYSQL_PASSWORD: azerty1234
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - dbdata:/var/lib/mysql
+    # command: "--default-authentication-plugin=mysql_native_password"
+    networks:
+      - app-network
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:php7.4-fpm-alpine
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: azerty1234
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress:/var/www/html
+    deploy:
+      replicas: 2
+
+    networks:
+      - app-network
+    ports:
+      - "9000"
+
+  proxy:
+    depends_on:
+      - wordpress
+    image: nginx:latest
+    container_name: proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - wordpress:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+    networks:
+      - app-network
+
+  redis:
+    image: redis:latest
+    volumes:
+      - redisdata:/var/lib/redis
+    networks:
+      - app-network
+
+volumes:
+  wordpress:
+  dbdata:
+  redisdata:
+
+networks:
+  app-network:
+    driver: bridge
