@@ -31,6 +31,9 @@ services:
       WP_REDIS_HOST: redis
     volumes:
       - wordpress:/var/www/html
+      - ./wp-conf/wp-config.php:/var/www/html/wp-config.php
+      - ./wp-conf/wp-config-docker.php:/var/www/html/wp-config-docker.php
+
     deploy:
       replicas: 2
     networks:
