@@ -3,7 +3,6 @@ version: "3.9"
 services:
   db:
     image: mysql:latest
-    container_name: db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
@@ -46,7 +45,6 @@ services:
     depends_on:
       - wordpress
     image: nginx:latest
-    container_name: proxy
     restart: always
     ports:
       - "80:80"
