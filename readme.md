@@ -1,6 +1,6 @@
 # TP-WIK-DPS-TP03-BONUS
 
-## CONSIGNES :
+## CONSIGNES
 
 Créer un docker-compose.yaml pour déployer une architecture 3 tiers (app/db/front):
 
@@ -10,14 +10,14 @@ Créer un docker-compose.yaml pour déployer une architecture 3 tiers (app/db/fr
 - Un reverse proxy nginx pour servir le wordpress (le seul service exposé) ✅
 - Configurer wordpress pour utiliser les différents services ✅
 
-## Les Technos :
+## Les Technos
 
 - WordPress
 - Mysql
 - Redis
 - NGINX
 
-## Lancer le projet :
+## Lancer le projet
 
 Commande à lancer dans le temrinal à la racine du projet :
 
