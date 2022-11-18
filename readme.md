@@ -30,7 +30,7 @@ Nous pouvons ainsi voir que la base Mysql ainsi que Redis, le proxy NGINX et le 
 Ensuite on installe le plugin Redis Cache pour WordPress de "Till Krüss"
 ![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/Redis_ext_wp.png)
 
-Une fois l'extension installée, on l'active on retrouve l'état de celle-ci ainsi:
+Une fois l'extension installée, on l'active, puis on retrouve l'état de celle-ci:
 ![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/WP_Etat_de_connexion1.png)
 ![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/WP_Etat_de_connexion2.png)
 ![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/WP_Etat_de_connexion3.png)
