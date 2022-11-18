@@ -15,6 +15,7 @@ Créer un docker-compose.yaml pour déployer une architecture 3 tiers (app/db/fr
 - WordPress
 - Mysql
 - Redis
+- NGINX
 
 ## Lancer le projet :
 
