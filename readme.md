@@ -41,6 +41,6 @@ Redis est donc bien installé, on peut maintenant visiter le wordpress pour y la
 ![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/WP_test_comment2.png)
 
 En revenant dans VScode, on remarque que tout se passe correctement, redis est bien relié et fait le travail:
-![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/Debug_capture_vscode1.png)
+![screenshot](https://github.com/maxlestage/BONUS-WIK-TP03/blob/main/images/Debug_capture_vscode2.png)
 
 LESTAGE Maxime - TP DevOps n°3 - BONUS - Ynov 2022.
